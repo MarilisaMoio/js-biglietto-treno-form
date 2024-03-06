@@ -4,20 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootalo Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="input-container">
-        <div class="input-group">
-            <label for="travel-km">Inserisci qui i km da percorrere</label>
-            <input type="number" name="" id="travel-km">
+    <header>
+        <h1>Bootalo</h1>
+    </header>
+    <main>
+        <div class="box">
+            <h2>Per conoscere il prezzo del tuo biglietto, riempi i campi qui sotto:</h2>
+            <div class="input-container">
+                <div class="input-group"></div>
+                    <label for="user-name">Inserisci il tuo nome e cognome</label>
+                    <input type="text" name="" id="user-name">
+                </div>
+                <div class="input-group">
+                    <label for="travel-km">Inserisci i km da percorrere</label>
+                    <input type="number" name="" id="travel-km">
+                </div>
+                <div class="input-group">
+                    <label for="user-age">Inserisci eventuali offerte</label>
+                    <select name="" id="user-age">
+                        <option value="Base" selected>Prezzo Base</option>
+                        <option value="Young">Offerta Young</option>
+                        <option value="Senior">Offerta Senior</option>
+                    </select>
+                    <span class="info">
+                        <i class="fas fa-circle-info"></i>
+                        <div class="info-box display-none">
+                            <ul>
+                                <li>L'offerta Young si applica ai minori di 18 anni.</li>
+                                <li>L'offerta Senior si applica a chi ha più di 65 anni.</li>
+                                <li>È necessario dimostrare la propria età con un documento d'identità in corso di validità, pena il pagamento di una penale.</li>
+                            </ul>
+                        </div>
+                    </span>
+                </div>
+                <button type="button" class="input-btn">Genera il biglietto</button>
+                <button type="button" class="cancel-btn">Annulla</button>
+                <div>Qui sotto verrà generato il tuo biglietto.</div>
+                <div id="ticket">
+                    <h4>Riepilogo viaggio:</h4>
+                    <div>
+                        <h5>Nome</h5>
+                        <div id="buyer-name">---</div>
+                    </div>
+                    <div>
+                        <h5>Offerta</h5>
+                        <div id="buyer-offer">---</div>
+                    </div>
+                    <div>
+                        <h5>Prezzo biglietto:</h5>
+                        <div id="buyer-price">---</div>
+                    </div>
+                    <div>
+                        <h5>Carrozza:</h5>
+                        <div id="buyer-carriage">---</div>
+                    </div>
+                    <div>
+                        <h5>Codice biglietto:</h5>
+                        <div id="buyer-code">---</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="input-group"></div>
-            <label for="user-age">Inserisci qui la tua età</label>
-            <input type="number" name="" id="user-age">
-        </div>
-        <button type="button">Genera il biglietto</button>
-    </div>
+    </main>
+    
     <!--js-->
     <script type="text/javascript" src="js/script.js"></script>
 </body>
