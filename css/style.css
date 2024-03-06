@@ -96,10 +96,12 @@ label{
     padding: 10px 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    & :first-child{
+    justify-content: space-evenly;
+    & > :first-child{
         width: 100%;
-        text-align: center;
+    }
+    & > :not(:first-child){
+        width: 30%;
     }
 }
 
